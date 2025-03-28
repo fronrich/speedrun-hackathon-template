@@ -79,16 +79,20 @@ This command will clone the `main` branch of the repository into a new folder ca
 A brief overview of the project structure:
 
 ```sh
-my-project/
-├── node_modules/           # Project dependencies
-├── public/                 # Static files
-├── src/                    # Application source code
-│   ├── components/         # React components
-│   ├── styles/             # Tailwind CSS and custom styles
-│   └── App.jsx             # Main application component
-├── package.json            # Project metadata and scripts
-├── vite.config.js          # Vite configuration
-└── README.md               # Project documentation
+src/
+├── App.tsx               # Main application component that composes the overall app layout
+├── assets                # Folder for static assets like images and icons
+│   └── react.svg         # Sample SVG asset used within the app
+├── components            # Reusable UI components for the application
+│   ├── AppHeader.tsx     # Header component containing the app’s navigation and branding
+│   ├── FileUploader.tsx  # Component for handling file uploads
+│   └── InputField.tsx    # Custom input field component with integrated validation
+├── index.css             # Global CSS file, includes Tailwind CSS imports and base styles
+├── main.tsx              # Application entry point where the React app is bootstrapped
+├── routes                # Directory for route-based components or pages
+│   └── Home.tsx          # Home page component rendered at the root route
+└── vite-env.d.ts         # TypeScript declaration file for Vite's environment variables
+
 ```
 
 ## Contributing
