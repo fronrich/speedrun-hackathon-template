@@ -1,54 +1,106 @@
-# React + TypeScript + Vite
+# Speedrun Hackathon Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A degit template for the Vite-React community to kickstart your hackathon projects quickly with a preconfigured setup using Vite, React, Tailwind CSS, Flowbite React, and more.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Vite-powered** development for fast hot module replacement.
+- **React 19** with latest features.
+- **Tailwind CSS** integration for rapid styling.
+- **Flowbite React** components with a post-install patch.
+- **TypeScript** support and ESLint configured for code quality.
+- **React Hook Form** and **React Router** for robust form handling and routing.
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- [Node.js](https://nodejs.org/) (LTS recommended)
+- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
+
+### Installation via degit
+
+You can quickly clone the template using degit. Run the following command in your terminal:
+
+```bash
+npx degit fronrich/speedrun-hackathon-template#main my-project
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+This command will clone the `main` branch of the repository into a new folder called `my-project`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Setup
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+1. **Navigate to your project directory:**
+
+   ```bash
+   cd my-project
+   ```
+
+2. **Install dependencies:**
+
+   Using npm:
+
+   ```bash
+   npm install
+   ```
+
+   Or using Yarn:
+
+   ```bash
+   yarn install
+   ```
+
+3. **Start the development server:**
+
+   Using npm:
+
+   ```bash
+   npm run dev
+   ```
+
+   Or using Yarn:
+
+   ```bash
+   yarn dev
+   ```
+
+   This will start the Vite development server. Open your browser and navigate to the displayed URL (usually [http://localhost:3000](http://localhost:3000)).
+
+### Scripts
+
+- **`npm run dev`**: Starts the development server using Vite.
+- **`npm run build`**: Builds the project for production. It runs TypeScript build followed by the Vite build.
+- **`npm run preview`**: Serves the production build locally for preview.
+- **`npm run lint`**: Lints your codebase using ESLint.
+- **`postinstall`**: Automatically applies the Flowbite React patch after installation.
+
+## Project Structure
+
+A brief overview of the project structure:
+
+```sh
+my-project/
+├── node_modules/           # Project dependencies
+├── public/                 # Static files
+├── src/                    # Application source code
+│   ├── components/         # React components
+│   ├── styles/             # Tailwind CSS and custom styles
+│   └── App.jsx             # Main application component
+├── package.json            # Project metadata and scripts
+├── vite.config.js          # Vite configuration
+└── README.md               # Project documentation
 ```
+
+## Contributing
+
+Feel free to submit issues or pull requests if you have suggestions or improvements. Make sure to follow the coding conventions and run the linter before submitting changes.
+
+## License
+
+This project is licensed as per the terms provided in the repository.
+
+---
+
+Happy hacking and enjoy building with the Speedrun Hackathon Template!
+
+If you encounter any issues or have further questions, feel free to reach out or open an issue on [GitHub](https://github.com/fronrich/speedrun-hackathon-template).

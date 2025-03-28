@@ -18,7 +18,7 @@ interface FileUploaderProps {
     | undefined;
 
   label: string;
-  defaultValue: string | number;
+  defaultValue?: string | number;
 }
 
 const FileUploader: FC<FileUploaderProps> = ({
