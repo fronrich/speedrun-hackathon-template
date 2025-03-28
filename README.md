@@ -64,7 +64,7 @@ This command will clone the `main` branch of the repository into a new folder ca
    yarn dev
    ```
 
-   This will start the Vite development server. Open your browser and navigate to the displayed URL (usually [http://localhost:3000](http://localhost:3000)).
+   This will start the Vite development server. Open your browser and navigate to the displayed URL ([http://localhost:5173](http://localhost:5173) by default).
 
 ### Scripts
 
